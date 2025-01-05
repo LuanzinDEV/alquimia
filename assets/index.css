@@ -1,1 +1,352 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+html {
+  font-family: "Open Sans", serif;
+}
+
+/* Navbar */
+.menu {
+  font-family: "Open Sans";
+  display: flex;
+  height: 80px;
+  width: 100%;
+  padding: 12px 16px;
+  position: relative;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  z-index: 1;
+  border-bottom: 1px #c6ab4d solid;
+}
+
+.logo span {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav_movel {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 2;
+}
+
+.acesse {
+  margin: 20px 0;
+}
+
+.acesse a {
+  text-decoration: none;
+  padding: 10px 15px;
+  color: #c6ab4d;
+  transition: color 0.3s;
+}
+
+.acesse a:hover {
+  background-color: #c6ab4d;
+  box-sizing: border-box; /* Garante que o padding não afete a área do fundo */
+  transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+  border-radius: 5px;
+  color: white;
+}
+
+.nav_computador {
+  display: flex;
+  margin: 15px;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.nav_computador li {
+  list-style: none;
+}
+
+.nav_computador .acesse a {
+  text-decoration: none;
+  padding: 10px 15px;
+  color: #c6ab4d;
+  font-size: 12px;
+  transition: color 0.3s;
+}
+
+.nav_computador .acesse a:hover {
+  background-color: #c6ab4d;
+  border-radius: 5px;
+  box-sizing: border-box; /* Garante que o padding não afete a área do fundo */
+  transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+  color: white;
+}
+
+/* Ícone do Menu */
+.menu-toggle {
+  display: none;
+  border-radius: 5px;
+  background-color: black;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle div {
+  width: 25px;
+  height: 3px;
+  background-color: #f0f0f0;
+  margin: 3px 0;
+}
+
+/* Botão fechar */
+.close {
+  width: 40px;
+  height: 40px;
+  background-color: #ff4d4d;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.close:hover {
+  background-color: #ff1a1a;
+  transform: scale(1.1);
+}
+
+.nav_movel.nav-abrir {
+  display: flex; /* Mostra a nav quando ativada */
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 24px;
+  text-align: center;
+}
+
+/*item direito*/
+.item_direito {
+  text-align: center;
+  gap: 5px;
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.item_direito .cadastro_button {
+  background-color: white; /* Cor de fundo inicial */
+  border: 1px #c6ab4d solid;
+  color: #c6ab4d;
+  padding: 15px 5px;
+  border-radius: 10px;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s; /* Transição suave */
+}
+
+.item_direito .cadastro_button:hover {
+  background-color: #c6ab4d; /* Altera para a cor de fundo desejada no hover */
+  color: white; /* Altera a cor do texto no hover */
+  border-radius: 5px;
+  box-sizing: border-box; /* Garante que o padding não afete a área do fundo */
+}
+
+.item_direito .cadastro_button a {
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 12px;
+  font-weight: 700;
+  color: inherit; /* Herda a cor do botão */
+  transition: color 0.3s;
+}
+
+/*item centro*/
+
+.item_centro img {
+  max-width: 100%;
+  height: 80px; /* A mesma altura da navbar */
+  display: flex;
+  align-items: center; /* Alinha os itens verticalmente */
+  justify-content: center; /* Alinha os itens horizontalmente */
+}
+
+/*Conteudo*/
+
+.content {
+  text-align: left;
+  font-weight: 700;
+  font-size: 15px;
+  padding-top: 100px;
+  width: 70vw;
+}
+
+/*Destaque*/
+
+.conteudo_destaque {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.card_destaque {
+  width: 42vw;
+  height: 40vh;
+  border-radius: 10px;
+  background-color: red;
+}
+
+.descricao_destaque {
+    width: 18vw;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.data_destaque {
+  color: #c6ab4d;
+  font-size: 14px;
+}
+
+.local_destaque {
+  color: rgb(76, 87, 108);
+  font-size: 12px;
+}
+
+.detalhe_destaque {
+  text-decoration: none;
+  text-align: center;
+  border: 1px #c6ab4d solid;
+  color: #c6ab4d;
+  width: 150px;
+  padding: 15px 5px;
+  border-radius: 10px;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.detalhe_destaque:hover {
+  background-color: #c6ab4d; /* Altera para a cor de fundo desejada no hover */
+  color: white; /* Altera a cor do texto no hover */
+
+}
+
+/*linha*/
+
+.linha {
+    margin: 20px auto 0;
+    width: 50%; /* Define a largura como metade da tela */
+    height: 1px; /* Define a altura da linha */
+    background-color: #c6ab4d; /* Cor da linha */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+/*card */
+
+.card-container-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .card-container {
+    display: flex;
+    overflow-x: scroll;
+    padding: 20px;
+    gap: 15px;
+    width: 80%;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .card h3 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  
+  .scroll-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .left-btn {
+    left: 0;
+  }
+  
+  .right-btn {
+    right: 0;
+  }
+
+  .img_card_eventos{
+    background-color: red;
+    border-radius: 10px;
+    height: 165px;
+    width: 270px;
+  }
+
+@media (max-width: 768px) {
+    .content{
+        width: 95vw;
+    }
+    /*destaque*/
+    .card_destaque{
+        width: 60vw;
+    }
+    .detalhe_destaque{
+        width: 90px;
+        font-size: 10px;
+    }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav_computador {
+    display: none;
+  }
+}
